@@ -42,6 +42,10 @@ class Results(object):
                     # very important to reset this counter 
                     # or else the return will fail
                     self._iter = 0
+                else:
+                    # deal with malformed templates
+                    # stop if there isn't anything
+                    raise StopIteration
 
             else:
                 raise StopIteration
